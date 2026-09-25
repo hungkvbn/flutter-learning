@@ -1,0 +1,44 @@
+# Dart / Flutter
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+coverage/
+doc/api/
+*.g.dart
+*.freezed.dart
+
+# IDE
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/launch.json
+*.iml
+*.swp
+
+# Android
+**/android/.gradle/
+**/android/local.properties
+**/android/key.properties
+**/android/app/*.jks
+**/android/app/*.keystore
+**/android/captures/
+
+# iOS / macOS
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/flutter_export_environment.sh
+**/*.xcworkspace/xcuserdata/
+**/*.xcodeproj/xcuserdata/
+
+# Bí mật — không bao giờ commit
+.env
+*.env
+**/google-services.json
+**/GoogleService-Info.plist
+
+# macOS
+.DS_Store

@@ -53,18 +53,42 @@ Mỗi giai đoạn có `README.md` riêng liệt kê 6 tuần và kết quả c�
 
 ## Quy ước
 
-**Commit message** theo [Conventional Commits](https://www.conventionalcommits.org) — đây cũng là thứ được hỏi ở tuần 27:
+**Commit message viết bằng tiếng Anh**, theo [Conventional Commits](https://www.conventionalcommits.org). Lịch sử Git của repo này sẽ được recruiter và tech lead đọc, trong đó có người nước ngoài — và tiếng Anh là quy ước mặc định ở gần như mọi team. Đây cũng là chủ đề được đào sâu ở tuần 27.
 
 ```
-feat:     thêm tính năng
-fix:      sửa lỗi
-refactor: đổi code, không đổi hành vi
-test:     thêm hoặc sửa test
-docs:     README, ghi chú
-chore:    cấu hình, dọn dẹp
+<type>(<scope>): <mô tả ngắn, thể mệnh lệnh, không dấu chấm cuối>
 ```
 
-Ví dụ: `feat(week-03): CLI quản lý chi tiêu đọc ghi file JSON`
+| Type | Dùng khi |
+|---|---|
+| `feat` | thêm tính năng |
+| `fix` | sửa lỗi |
+| `refactor` | đổi code, không đổi hành vi |
+| `perf` | tối ưu hiệu năng |
+| `test` | thêm hoặc sửa test |
+| `docs` | README, ghi chú, comment |
+| `style` | format, lint, không đổi logic |
+| `chore` | cấu hình, dependency, dọn dẹp |
+| `ci` | pipeline, workflow |
+
+`scope` là nơi bị ảnh hưởng — tuần đang học, hoặc tên feature:
+
+```
+docs: add 48-week roadmap structure and week 1 guide
+feat(week-03): read and write expense data as JSON
+refactor(week-04): extract Transaction into its own class
+test(week-06): cover quiz scoring logic
+fix(expense-tracker): keep VND format when editing an amount
+chore(ci): cache pub dependencies in GitHub Actions
+```
+
+Ba điều dễ sai:
+
+- **Dùng thể mệnh lệnh**, không phải quá khứ: `add validation`, không phải `added validation`. Đọc là "commit này sẽ ... ".
+- **Một commit = một thay đổi có nghĩa.** Nếu phải viết `and` trong mô tả thì nên tách thành hai commit.
+- **Mô tả cái gì thay đổi và vì sao**, không phải thay đổi ở đâu — file nào thì `git diff` đã nói rồi.
+
+Ghi chú trong `notes/` vẫn viết bằng tiếng Việt: mục đích ở đó là hiểu sâu, không phải luyện tiếng Anh.
 
 **Ba quy tắc không phá**
 
